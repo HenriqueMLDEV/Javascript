@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUAL O SEU PAIS ?</title>
+  </head>
+  <body>
+    <h1>Bem vindo ao Brasil, Qual a sua nacionalidade ?</h1>
+    Qual o seu país de origem ?
+    <input type="text" name="txtpais" id="txtpais" />
+    <input type="button" value="Verificar" onclick="analisarNacionalidade()" />
+    <div id="res"></div>
+
+    <script>
+      function analisarNacionalidade() {
+        var txtpais = document.getElementById("txtpais");
+        var res = document.querySelector("div#res");
+        var paisOrigem = txtpais.value;
+        res.innerHTML = `O seu páis de origem é o(a) ${paisOrigem}`;
+        if (paisOrigem == "Brasil") {
+          res.innerHTML += `<p> Você é Brasileiro</p>`;
+        } else {
+          res.innerHTML += `<p> Você é um Estrangeiro`;
+        }
+      }
+    </script>
+  </body>
+</html>
